@@ -4,7 +4,11 @@ import zahl from "zahl"
 import chalk from "chalk"
 
 const job = async argv => {
-  const changes = await gitFlush(argv.message, argv)
+  const changes = await gitFlush(argv.message, {
+    directory: argv.directory,
+    pull: !argv.skipPull,
+    push: !argv.skipPush,
+  })
   if (changes === null) {
     process.stdout.write(chalk.gray("Not a git repository\n"))
   } else if (changes === 0) {
@@ -15,7 +19,11 @@ const job = async argv => {
 }
 
 const builder = {
-  push: {
+  "skip-push": {
+    type: "boolean",
+    default: false,
+  },
+  "skip-pull": {
     type: "boolean",
     default: false,
   },

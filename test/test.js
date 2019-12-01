@@ -13,7 +13,7 @@ it("should run", async () => {
   await fsp.emptyDir(directory)
   const gitRepository = simpleGit(directory)
   await gitRepository.init()
-  return coffee.fork(main, ["message", "--directory", directory])
+  return coffee.fork(main, ["message", "--directory", directory, "--skip-pull", "--skip-push"])
     .expect("stdout", "Nothing to commit\n")
     .expect("code", 0)
     .debug()
