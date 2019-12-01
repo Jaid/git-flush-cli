@@ -2,6 +2,7 @@ import path from "path"
 
 import coffee from "coffee"
 import fsp from "@absolunet/fsp"
+import simpleGit from "simple-git/promise"
 
 const main = path.resolve(process.env.MAIN)
 
@@ -10,9 +11,10 @@ it("should run", async () => {
   console.log(`Directory: ${directory}`)
   await fsp.mkdirp(directory)
   await fsp.emptyDir(directory)
+  const gitRepository = simpleGit(directory)
+  await gitRepository.init()
   return coffee.fork(main, ["message", "--directory", directory])
-  // return coffee.fork(main, ["--help"])
-    .expect("stdout", "Not a git repository\n")
+    .expect("stdout", "Nothing to commit\n")
     .expect("code", 0)
     .debug()
     .end()
