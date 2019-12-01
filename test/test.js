@@ -1,7 +1,6 @@
 import path from "path"
 
 import coffee from "coffee"
-import simpleGit from "simple-git/promise"
 import fsp from "@absolunet/fsp"
 
 const main = path.resolve(process.env.MAIN)
