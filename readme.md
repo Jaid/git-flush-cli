@@ -1,3 +1,6 @@
 # git-flush-cli
-## Under construction
-Not much to see right now. Come back lator! :crocodile:
+
+CLI version of git-flush, used for committing changes only if needed.
+
+
+
