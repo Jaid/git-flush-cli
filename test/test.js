@@ -13,6 +13,7 @@ it("should run", async () => {
   const gitRepository = simpleGit(directory)
   await gitRepository.init()
   return coffee.fork(main, ["message", "--push=false"])
+    .expect("stdout", "Not a git repository\n")
     .expect("code", 0)
     .debug()
     .end()
