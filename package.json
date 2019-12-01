@@ -1,14 +1,17 @@
 {
   "webpackConfigJaid": "cli",
+  "description": "Commits",
   "version": "0.1.0",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
-    "@absolunet/fsp": "^1.6.2",
     "@babel/runtime": "^7.7.4",
-    "lodash": "^4.17.15",
-    "yargs": "^15.0.2"
+    "chalk": "^3.0.0",
+    "git-flush": "^1.0.1",
+    "yargs": "^15.0.2",
+    "zahl": "^2.0.3"
   },
   "devDependencies": {
+    "@absolunet/fsp": "^1.6.2",
     "acorn": "^7.1.0",
     "babel-jest": "^24.9.0",
     "babel-preset-jaid": "^6.11.1",
@@ -19,6 +22,7 @@
     "eslint-config-jaid": "^1.37.0",
     "jest": "^24.9.0",
     "rimraf": "^3.0.0",
+    "simple-git": "^1.126.0",
     "webpack": "^4.41.2",
     "webpack-config-jaid": "^5.29.1"
   },

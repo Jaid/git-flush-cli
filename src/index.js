@@ -1,25 +1,31 @@
-import path from "path"
-
 import yargs from "yargs"
-import fsp from "@absolunet/fsp"
-import {noop} from "lodash"
+import gitFlush from "git-flush"
+import zahl from "zahl"
+import chalk from "chalk"
 
-const getPackageName = async cwd => {
-  const packageJsonFile = path.join(cwd, "package.json")
-  const packageJsonExists = await fsp.pathExists(packageJsonFile)
-  if (packageJsonExists) {
-    const pkg = await fsp.readJson(packageJsonFile)
-    if (pkg?.name) {
-      return pkg.name
-    }
+const job = async argv => {
+  const changes = await gitFlush(argv.message, argv)
+  if (changes === null) {
+    console.log(chalk.gray("Not a git repository"))
+  } else if (changes === 0) {
+    console.log(chalk.gray("Nothing to commit"))
+  } else {
+    console.log(chalk.green(`Committed ${zahl(changes, "change")} with message: `) + argv.message)
   }
-  return path.basename(cwd)
 }
 
-const job = async args => {
-  const cwd = process.cwd()
-  const name = await getPackageName(cwd)
-  process.stdout.write(`${name}\n`)
+const builder = {
+  push: {
+    type: "boolean",
+    default: false,
+  },
+  directory: {
+    type: "string",
+    default: process.cwd(),
+  },
 }
 
-yargs.command("$0", "Returns the package name", noop, job).argv
+yargs
+  .scriptName(_PKG_NAME)
+  .version(_PKG_VERSION)
+  .command("$0 <message>", _PKG_DESCRIPTION, builder, job).argv
