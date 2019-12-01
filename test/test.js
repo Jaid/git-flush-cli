@@ -7,9 +7,11 @@ const main = path.resolve(process.env.MAIN)
 
 it("should run", async () => {
   const directory = path.join(__dirname, "..", "dist", "test")
+  console.log(`Directory: ${directory}`)
   await fsp.mkdirp(directory)
   await fsp.emptyDir(directory)
   return coffee.fork(main, ["message", "--directory", directory])
+  // return coffee.fork(main, ["--help"])
     .expect("stdout", "Not a git repository\n")
     .expect("code", 0)
     .debug()
