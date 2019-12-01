@@ -6,11 +6,11 @@ import chalk from "chalk"
 const job = async argv => {
   const changes = await gitFlush(argv.message, argv)
   if (changes === null) {
-    console.log(chalk.gray("Not a git repository"))
+    process.stdout.write(chalk.gray("Not a git repository\n"))
   } else if (changes === 0) {
-    console.log(chalk.gray("Nothing to commit"))
+    process.stdout.write(chalk.gray("Nothing to commit\n"))
   } else {
-    console.log(chalk.green(`Committed ${zahl(changes, "change")} with message: `) + argv.message)
+    process.stdout.write(`${chalk.green(`Committed ${zahl(changes, "change")} with message: `) + argv.message}\n`)
   }
 }
 
