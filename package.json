@@ -6,7 +6,7 @@
   "dependencies": {
     "@babel/runtime": "^7.7.4",
     "chalk": "^3.0.0",
-    "git-flush": "^1.0.1",
+    "git-flush": "^1.1.0",
     "yargs": "^15.0.2",
     "zahl": "^2.0.3"
   },
