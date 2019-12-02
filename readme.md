@@ -3,6 +3,15 @@
 
 CLI version of git-flush, used for committing changes only if needed.
 
+## Installation
+<a href='https://npmjs.com/package/git-flush-cli'><img alt='npm logo' src='https://raw.githubusercontent.com/npm/logos/master/npm%20logo/npm-logo-red.png' height=16/></a>
+```bash
+npm install --global git-flush-cli@^
+```
+<a href='https://yarnpkg.com/package/git-flush-cli'><img alt='Yarn logo' src='https://raw.githubusercontent.com/yarnpkg/assets/master/yarn-kitten-full.png' height=24/></a>
+```bash
+yarn global add git-flush-cli@^
+```
 
 
 ## Try it out
