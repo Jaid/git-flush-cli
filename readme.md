@@ -3,15 +3,41 @@
 
 CLI version of git-flush, used for committing changes only if needed.
 
+<a href="https://raw.githubusercontent.com/Jaid/git-flush-cli/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/git-flush-cli?style=flat-square&color=success" alt="License"/></a>  
+<a href="https://github.com/Jaid/git-flush-cli/commits"><img src="https://img.shields.io/github/commits-since/Jaid/git-flush-cli/v2.0.0?style=flat-square&logo=github&color=success" alt="Commits since v2.0.0"/></a> <a href="https://github.com/Jaid/git-flush-cli/commits"><img src="https://img.shields.io/github/last-commit/Jaid/git-flush-cli?style=flat-square&logo=github&color=red" alt="Last commit"/></a> <a href="https://github.com/Jaid/git-flush-cli/issues"><img src="https://img.shields.io/github/issues/Jaid/git-flush-cli?style=flat-square&logo=github&color=red" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/git-flush-cli"><img src="https://img.shields.io/npm/v/git-flush-cli?style=flat-square&logo=npm&label=latest%20version&color=success" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/git-flush-cli/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/git-flush-cli?style=flat-square&logo=npm&color=red" alt="Dependents"/></a> <a href="https://npmjs.com/package/git-flush-cli"><img src="https://img.shields.io/npm/dm/git-flush-cli?style=flat-square&logo=npm&color=red" alt="Downloads"/></a>
+
+
+
+
+
+
+
+
+
 ## Installation
-<a href='https://npmjs.com/package/git-flush-cli'><img alt='npm logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/npm.png'/></a>
+<a href="https://npmjs.com/package/git-flush-cli"><img src="https://img.shields.io/badge/npm-git--flush--cli-C23039?style=flat-square&logo=npm" alt="git-flush-cli on npm"/></a>
 ```bash
 npm install --global git-flush-cli@^2.0.0
 ```
-<a href='https://yarnpkg.com/package/git-flush-cli'><img alt='Yarn logo' src='https://github.com/Jaid/action-readme/raw/master/images/base-assets/yarn.png'/></a>
+<a href="https://yarnpkg.com/package/git-flush-cli"><img src="https://img.shields.io/badge/Yarn-git--flush--cli-2F8CB7?style=flat-square&logo=yarn&logoColor=white" alt="git-flush-cli on Yarn"/></a>
 ```bash
 yarn global add git-flush-cli@^2.0.0
 ```
+
+
+
+
+## CLI Usage
+After installing package `git-flush-cli` globally, you can use its command line interface.
+```bash
+git-flush-cli
+```
+For usage instructions:
+```bash
+git-flush-cli --help
+```
+
 
 
 
