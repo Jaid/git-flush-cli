@@ -31,7 +31,7 @@ yarn global add git-flush-cli@^2.0.0
 ## CLI Usage
 After installing package `git-flush-cli` globally, you can use its command line interface.
 ```bash
-git-flush-cli
+git-flush-cli "Edited some files"
 ```
 For usage instructions:
 ```bash
