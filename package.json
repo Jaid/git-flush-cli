@@ -40,5 +40,9 @@
     "prepareActionJest": "npm run build:prod"
   },
   "name": "git-flush-cli",
-  "funding": "https://github.com/sponsors/jaid"
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/git-flush-cli"
+  }
 }
