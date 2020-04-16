@@ -1,6 +1,6 @@
 {
   "webpackConfigJaid": "cli",
-  "description": "CLI version of git-flush, commits and pushed git changes if repository is dirty.",
+  "description": "CLI version of git-flush, used for committing changes only if needed.",
   "version": "2.0.1",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "dependencies": {
@@ -44,5 +44,7 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/jaid/git-flush-cli"
-  }
+  },
+  "homepage": "https://github.com/Jaid/git-flush-cli",
+  "keywords": []
 }
