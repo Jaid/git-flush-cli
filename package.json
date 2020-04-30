@@ -45,5 +45,15 @@
     "url": "https://github.com/jaid/git-flush-cli"
   },
   "homepage": "https://github.com/Jaid/git-flush-cli",
-  "keywords": []
+  "keywords": [
+    "cli",
+    "git",
+    "git-commit",
+    "git-flush",
+    "git-push",
+    "tool",
+    "util",
+    "utility",
+    "vcs"
+  ]
 }
