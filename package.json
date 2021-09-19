@@ -55,5 +55,6 @@
     "util",
     "utility",
     "vcs"
-  ]
+  ],
+  "type": "module"
 }
